@@ -1,6 +1,84 @@
+@import "reset";
+@import "typography";
 
+
+@keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg); 
+    } 
+}
 
 
 body {
-    background-color: red;
+    font-family: 'FormularLight';
+    background-color: black;
+    color: white;
+    /* display:flex; */
 }
+
+a {
+    text-decoration: none;
+    color:white;
+}
+
+img {
+    width:100%;
+    height:100%;
+}
+
+
+
+/* ======================== */
+/* ======== Header ======== */
+/* ======================== */
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+}
+
+
+
+/* ======================== */
+/* ===== Interaction ====== */
+/* ======================== */
+
+section.logo-interaction {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+
+
+    div.spinner {
+        animation: spin 7s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 178px;
+        height: 178px;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+    div.smile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 78px;
+        height: 82px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        pointer-events: none;
+    }
+
+
+}
+

@@ -3,7 +3,7 @@
 // we pick the area in which the interaction will run
 const sectionTag = document.querySelector('section.logo-interaction')
 // we query all the logo elements
-const logoTags = sectionTag.querySelectorAll('section.logo-interaction div')
+let logoTags = sectionTag.querySelectorAll('section.logo-interaction div')
 
 // we need to set a position where the cursor will start
 // we want the interaction to start and finish in the middle
@@ -39,14 +39,11 @@ const handleResizeFooter = function () {
  // here we grab the data speed from the html
  // and animate it following the cursor
 
- let speed = 0.05
-
 logoTags.forEach(tag => {
-
 
   function animate() {
 
-     speed = parseFloat(tag.getAttribute("data-speed"))
+    let speed = parseFloat(tag.getAttribute("data-speed"))
 
     let distX = cursorX - logoX 
     let distY = cursorY - logoY 
@@ -54,8 +51,8 @@ logoTags.forEach(tag => {
     logoX = logoX + (distX * speed)
     logoY = logoY + (distY * speed)
 
-    tag.style.left = logoX  + 'px'
-    tag.style.top = logoY + 'px'
+    tag.style.left = logoX  + "px"
+    tag.style.top = logoY + "px"
 
     requestAnimationFrame(animate)
   }

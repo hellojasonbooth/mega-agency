@@ -50,7 +50,7 @@ logoTags.forEach(tag => {
   // recalculate the center of the inetraction
   const handleResize = function () {
     w = areaTag.clientWidth
-		h = areaTag.clientHeight
+    h = areaTag.clientHeight
     logoX = w / 2
     logoY = h / 2
     mouseX = w / 2
